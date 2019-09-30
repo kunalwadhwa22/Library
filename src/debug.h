@@ -1,0 +1,1 @@
+#define printDebug(expr)    printf(#expr " = %d\n", expr)

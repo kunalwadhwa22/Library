@@ -1,0 +1,64 @@
+# msys32
+build/
+sdkconfig.old
+#sdkconfig  not yet
+
+# Eclipse
+.settings
+.project
+.cproject
+.metadata/
+
+# Visual Studio family
+Debug/
+Release/
+.vs/
+.vscode/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# vi/emacs
+*~
+*.bak
+*.swp
+.tags
+.clang*
+
+# Qt builds
+/build-*
+*.pro.user*
+
+# (GNU tools, DropBox, Microsoft/Libre Office temp files, etc)
+.gdb_history
+*.~lock*
+*~$*
+.dropbox.attr
+
+# Mac OS
+.DS_Store

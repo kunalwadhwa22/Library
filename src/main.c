@@ -2,59 +2,68 @@
 #include "file.h"
 #include "str.h"
 #include "debug.h"
+#include "linked_list.h"
 
 char pattern[] = "nal";
 
-main(int argc, char * argv[])
+int main(int argc, char const *argv[])
 {
-    int ex = 0, num = 0, found = 0;
-    int c;
-    int line_number = 0;
-    char line[MAXLINE];
-    while(--argc > 0 && (*++argv)[0] == '-')
-    {
-        while(c = *++argv[0])
-        {
-            switch(c)
-            {
-                case 'x':
-                    ex = 1;
-                    break;
-                case 'n':
-                    num = 1;
-                    break;
-                default :
-                    argc = 0;
-                    found = -1;
-                    break;
-            }
-        }
-    }
-    if(argc != 1)
-    {
-        // illegal
-    }
-    else
-    {
-        while (get_line(line, MAXLINE) > 0)
-        {
-            line_number++;
-            if((str_index(line, *argv) != -1 ) != ex)
-            {
-                if(num)
-                {
-                    printDebug(line_number);
-                }
-                printf("%s",line);
-                found++;
-            }
-        }
-        
-    }
-
-    printf("\n");
-    return found;
+    printf("Hello World\n");
+    use_slinkedlist_apis();
+    return 0;
 }
+
+
+// main(int argc, char * argv[])
+// {
+//     int ex = 0, num = 0, found = 0;
+//     int c;
+//     int line_number = 0;
+//     char line[MAXLINE];
+//     while(--argc > 0 && (*++argv)[0] == '-')
+//     {
+//         while(c = *++argv[0])
+//         {
+//             switch(c)
+//             {
+//                 case 'x':
+//                     ex = 1;
+//                     break;
+//                 case 'n':
+//                     num = 1;
+//                     break;
+//                 default :
+//                     argc = 0;
+//                     found = -1;
+//                     break;
+//             }
+//         }
+//     }
+//     if(argc != 1)
+//     {
+//         // illegal
+//     }
+//     else
+//     {
+//         while (get_line(line, MAXLINE) > 0)
+//         {
+//             line_number++;
+//             if((str_index(line, *argv) != -1 ) != ex)
+//             {
+//                 if(num)
+//                 {
+//                     printDebug(line_number);
+//                 }
+//                 printf("%s",line);
+//                 found++;
+//             }
+//         }
+        
+//     }
+
+//     printf("\n");
+//     return found;
+// }
 
 // int main()
 // {

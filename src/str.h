@@ -19,3 +19,16 @@ void str_copy(char * source, char * destination);
 // negative, zero or positive if str1 is less that, equal to, or greater than
 // str2
 int str_cmp(char * str1, char * str2);
+
+// Function to reverse a string
+// Takes a pointer to the string as arguement and reverses the string till the end
+void str_rev(char * str);
+
+// Function to reverse a string between two points
+void str_rev2(char * begin, char *end);
+
+// Function to reverse words in a string
+// Words are separated by spaces
+// Limitation : 
+//      Does not for sentences starting with spaces
+void str_revword(char * s);

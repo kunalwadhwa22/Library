@@ -59,3 +59,46 @@ int str_cmp(char * str1, char * str2)
             return 0;
     return str1[i] - str2[i];
 }
+
+void str_rev(char * str)
+{
+    char temp;
+    for(int i=0; i < (str_len(str) / 2 ); i++)
+    {
+        temp = str[i];
+        str[i] = str[str_len(str) - 1 - i];
+        str[str_len(str) - 1 - i] = temp;
+    }
+}
+
+
+void str_rev2(char *begin, char *end)
+{
+    char temp;
+    while(begin < end)
+    {
+        temp = *begin;
+        *begin++ = *end;
+        *end-- = temp;
+    }
+}
+
+void str_revword(char *s)
+{
+    char *word_begin = s;
+    char *temp = s;
+    while(*temp)
+    {
+        temp++;
+        if(*temp == '\0')
+        {
+            str_rev2(word_begin,temp-1);
+        }
+        else if(*temp == ' ')
+        {
+            str_rev2(word_begin,temp-1);
+            word_begin = temp + 1;
+        }
+    }
+    str_rev2(s,temp-1);
+}

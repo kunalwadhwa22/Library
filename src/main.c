@@ -5,36 +5,13 @@
 #include "linked_list.h"
 #include "sorting.h"
 #include "bitman.h"
+#include "bst.h"
 char pattern[] = "Hello kunal";
 int array_to_sort[5] = {5, 1, 2, 4, 3};
 
 int main(int argc, char const *argv[])
 {
-    int a = 2;
-    int b = 5;
-    printf(" a : %d , b : %d \n", a,b);
-    swap_int(&a,&b);
-    printf(" a : %d , b : %d \n", a,b);
-    //sort_insertion(array_to_sort,5);
-    //sort_selection(array_to_sort, 5);
-    //selectionSort(array_to_sort,5);
-    //sort_quick(array_to_sort,5);
-    //sort_merge(array_to_sort,5);
-    sort_bubble(array_to_sort,5);
-    print_intarray(array_to_sort, 5);
-    
-    int num = 64;
-    print_binary(num);
-    count_1s(num);
-    count_0s(num);
-
-    printDebug(count_1s(num));
-    printDebug(count_0s(num));
-
-    if(is_power_of_two(num))
-    {
-        printf("Is power of two\n");
-    }
+    use_bst();
 
     return 0;
 }
